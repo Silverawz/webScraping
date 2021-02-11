@@ -1,12 +1,15 @@
 package com.deroussenicolas;
 
+
 import java.util.Calendar;
+
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.deroussenicolas.batch.MyTask;
+import com.deroussenicolas.batch.MyTask2;
 
 import java.util.Timer;
 @SpringBootApplication
@@ -20,7 +23,8 @@ public class WebScrapingProjectApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		Calendar today = Calendar.getInstance();
 		Timer timer = new Timer(); 
-		timer.schedule(new MyTask(), today.getTime(), 1000*5); //  every 5s	
+		timer.schedule(new MyTask(), today.getTime(), 1000*1); //  every 1s	
+		timer.schedule(new MyTask2(), today.getTime(), 1000*4); //  every 4s	
 		//  every hours		1000*60*60
 	}
 	
