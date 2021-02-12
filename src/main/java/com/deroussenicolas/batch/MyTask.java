@@ -45,15 +45,13 @@ public class MyTask extends TimerTask {
 						Item item = new Item();
 						item.setTitle(itemAnchor.asText());
 						item.setUrl(itemAnchor.getHrefAttribute());
-						item.setPrice(new BigDecimal(itemPrice.replace("$", "")));
-						
+						item.setPrice(new BigDecimal(itemPrice.replace("$", "")));						
 						ObjectMapper mapper = new ObjectMapper();
 						String jsonString = mapper.writeValueAsString(item);
 						System.out.println(jsonString);
 						
 					}
-				}			
-				//System.out.println(page.asXml());		  
+				}			  
 				incremental++;
 			}
 		} catch (FailingHttpStatusCodeException e) {

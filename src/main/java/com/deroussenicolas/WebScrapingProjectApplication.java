@@ -24,7 +24,7 @@ public class WebScrapingProjectApplication implements CommandLineRunner {
 		Calendar today = Calendar.getInstance();
 		Timer timer = new Timer(); 
 		timer.schedule(new MyTask(), today.getTime(), 1000*1); //  every 1s	
-		timer.schedule(new MyTask2(), today.getTime(), 1000*4); //  every 4s	
+		//timer.schedule(new MyTask2(), today.getTime(), 1000*4); //  every 4s	
 		//  every hours		1000*60*60
 	}
 	
